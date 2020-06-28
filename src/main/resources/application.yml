@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/custom
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        batch_fetch_style: padded
+#        default_batch_fetch_size: 50
+#        jdbc.batch_size: 7
+#        order_inserts: true
+logging:
+  level:
+    org.hibernate.engine.jdbc.batch.internal.BatchingBatch: debug
+#    org.hibernate.SQL: debug
+#    org.hibernate.type: trace
